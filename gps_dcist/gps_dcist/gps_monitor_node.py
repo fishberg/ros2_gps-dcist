@@ -50,7 +50,7 @@ class GPSMonitorNode(Node):
         self.nickname = self.get_parameter("nickname").get_parameter_value().string_value
 
         self.status_pub = self.create_publisher(NodeInfoMsg, "gps/status", qos_profile=QoSProfile(depth=10))
-        self.create_subscription(NavSatFix, "ublox_gps_node/fix", self.gps_cb, 10) # TODO fix namespacing
+        self.create_subscription(NavSatFix, "fix", self.gps_cb, 10) # TODO fix namespacing # ublox_gps_node/fix
         self.timer = self.create_timer(1.0, self.timer_cb)
         
         self.status = NodeInfoMsg.STARTUP

@@ -7,11 +7,13 @@ launch:
 
   - push_ros_namespace: {namespace: $(var robot_name)}
   - set_remap: {from: /rtcm, to: rtcm}
+  - set_remap: {from: ublox_gps_node/fix, to: fix}
 
-  # run launch file for gpsd_client
+  # run launch file for ublox
   - include:
       if: $(var launch_gps)
-      file: $(find-pkg-share ublox_gps)/launch/ublox_gps_node-composed-launch.py
+      file: $(find-pkg-share gps_dcist)/launch/ublox.launch.py
+      #file: $(find-pkg-share ublox_gps)/launch/ublox_gps_node-composed-launch.py
 
   # run launch file for ntrip_client
   - include:
