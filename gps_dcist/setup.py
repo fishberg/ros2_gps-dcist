@@ -11,7 +11,7 @@ setup(
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
         ('share/' + package_name + '/launch', ['launch/gps_dcist.launch.yaml', 'launch/upenn_ntrip.launch.py', 'launch/ublox.launch.py']),
-        ('share/' + package_name + '/config', ['config/zed_f9p.yaml', 'config/c94_m8p_rover.yaml']),
+        ('share/' + package_name + '/config', ['config/c94_m8p_rover.yaml']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
