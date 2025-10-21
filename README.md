@@ -14,6 +14,7 @@ sudo apt install -y gpsd gpsd-tools gpsd-clients rtklib jq libasio-dev
 sudo systemctl stop gpsd
 sudo systemctl stop gpsd.socket
 sudo systemctl disable gpsd
+sudo usermod -aG dialout $USER
 reboot
 
 # confirm /dev/gps0 shows up when GPS is plugged in
