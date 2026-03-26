@@ -88,7 +88,7 @@ def generate_launch_description():
                     'rtcm_message_package': LaunchConfiguration('rtcm_message_package'),
 
                     # Will affect how many times the node will attempt to reconnect before exiting, and how long it will wait in between attempts when a reconnect occurs
-                    'reconnect_attempt_max': 10,
+                    'reconnect_attempt_max': 1000000,
                     'reconnect_attempt_wait_seconds': 5,
 
                     # How many seconds is acceptable in between receiving RTCM. If RTCM is not received for this duration, the node will attempt to reconnect

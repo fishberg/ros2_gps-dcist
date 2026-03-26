@@ -18,7 +18,7 @@ launch:
   # run launch file for ntrip_client
   - include:
       if: $(var launch_ntrip)
-      file: $(find-pkg-share gps_dcist)/launch/upenn_ntrip.launch.py
+      file: $(find-pkg-share gps_dcist)/launch/ntrip.launch.py
 
   # run our gps_monitor_node
   - node:
